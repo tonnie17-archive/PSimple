@@ -11,6 +11,7 @@ function get_config()
             'common',
             'controllers',
             'db',
+            'event',
             'interfaces',
             'logics',
             'models',

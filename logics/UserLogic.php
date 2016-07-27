@@ -14,7 +14,9 @@ class UserLogic extends AbstractLogic
     public function register($name)
     {
         $user = new User($name);
-        return $this->_user_mapper->save($user);
+        $user->on('register', new MailService());
+        $this->_user_mapper->save($user);
+        $user->trigger('register');
     }
 
     public function updateUser(User $user)

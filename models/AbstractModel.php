@@ -27,5 +27,23 @@ abstract class AbstractModel
             throw new RuntimeException($method . '() method does not exists');
         }
     }
+
+    public function on($event, EventListener $listener)
+    {
+        EventBus::subscribe($listener, $event);
+        return $this;
+    }
+
+    public function off($event, EventListener $listener)
+    {
+        EventBus::unsubscribe($listener, $event);
+        return $this;
+    }
+
+    public function trigger($event)
+    {
+        EventBus::notifyAll($event, $this);
+        return $this;
+    }
 }
 
