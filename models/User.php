@@ -5,18 +5,27 @@ class User extends AbstractModel
     private $_id;
     private $_name;
 
-    public function __construct($id, $name)
+    protected function getMapping()
     {
-        if (!is_int($id)) {
-            throw new InvalidArgumentException('Invalid Argument!');
-        }
-        $this->_id   = $id;
+        return [
+            'id'   => 'id',
+            'name' => 'name'
+        ];
+    }
+
+    public function __construct($name)
+    {
         $this->_name = $name;
     }
 
     public function getId()
     {
         return $this->_id;
+    } 
+
+    public function setId($id)
+    {
+        $this->_id = $id;
     }
 
     public function getName()

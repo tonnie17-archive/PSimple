@@ -1,9 +1,28 @@
 <?php
 
-abstract class AbstractDataProvider
+abstract class AbstractDataProvider extends AbstractDataConnector
 {
     use Sourcable;
 
-    public abstract function find($id);
-    public abstract function findAll();
+    public function find($id)
+    {
+        $source = $this->getSource();
+        $lists  = $source->fetchAll($this->getSchema());
+        foreach ($lists as $key => $row) {
+            if ($row[$this->getIdCol()]) {
+                return $row;
+            }
+        }
+        return $row;
+    }
+
+    public function findAll()
+    {
+        $source = $this->getSource();
+        $lists  = $source->fetchAll($this->getSchema());
+        if (is_null($lists)) {
+            return array();
+        }
+        return $lists;
+    }
 }

@@ -13,10 +13,18 @@ class UserLogic extends AbstractLogic
 
     public function register($name)
     {
-        $id = 1;
-        $user = new User($id, $name);
+        $user = new User($name);
         $this->_user_mapper->save($user);
-        return $id;
+    }
+
+    public function updateUser(User $user)
+    {
+        $this->_user_mapper->update($user);
+    }
+
+    public function deleteUser($id)
+    {
+        $this->_user_mapper->delete($id);
     }
 
     public function getUser($id)

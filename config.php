@@ -8,14 +8,17 @@ function get_config()
             'path' => realpath('./data/db.json'),
         ],
         'import' => [
+            'common',
             'controllers',
             'db',
+            'interfaces',
             'logics',
             'models',
             'services',
             'dataproviders',
             'datamappers',
-            'traits'
+            'traits',
+            'utils'
         ]
     ];
 }
