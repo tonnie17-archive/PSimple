@@ -14,7 +14,7 @@ class UserController extends BaseController
         $context = [
             'hasSuccess' => false
         ];
-        if ($request->getRequestMethod() === 'POST') {
+        if ($request->isPost()) {
             $name = $this->getParam('name');
             $this->_user_logic->register($name);
             $context['hasSuccess'] = true;

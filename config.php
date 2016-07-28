@@ -12,6 +12,7 @@ function get_config()
         ],
         'import' => [
             'app',
+            'cache',
             'common',
             'controllers',
             'db',
@@ -26,7 +27,7 @@ function get_config()
             'utils'
         ],
         'middlewares' => [
-            // 'SayHelloMiddleware',
+            'LogIPMiddleware',
         ],
         'template' => [
             'path'   => realpath('./views'),

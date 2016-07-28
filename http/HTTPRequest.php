@@ -13,6 +13,7 @@ class HTTPRequest
         $this->__cookie  = HTTPCookie::getInstance();
     }
 
+
     public static function makeAction($action)
     {
         $action = trim($action);
@@ -65,6 +66,16 @@ class HTTPRequest
     public function getRequestMethod()
     {
         return $this->__server['REQUEST_METHOD'];
+    }
+
+    public function isGet()
+    {
+        return $this->getRequestMethod() === 'GET';
+    }
+
+    public function isPost()
+    {
+        return $this->getRequestMethod() === 'POST';
     }
 
     public function getUA()
