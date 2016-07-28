@@ -13,6 +13,25 @@ class HTTPRequest
         $this->__cookie  = HTTPCookie::getInstance();
     }
 
+    public static function makeAction($action)
+    {
+        $action = trim($action);
+        return 'action' . ucfirst($action);
+    }
+
+    public function getController()
+    {
+        $paths           = explode('/', $this->getPathInfo());
+        $controller_path = trim($paths[1]);
+        return ucfirst($controller_path . 'Controller');
+    }
+
+    public function getAction()
+    {
+        $paths = explode('/', $this->getPathInfo());
+        return static::makeAction($paths[2]);
+    }
+
     public function getCookie()
     {
         return $this->__cookie;

@@ -11,14 +11,20 @@ class UserController extends BaseController
 
     public function actionRegister($request)
     {
-        $name = $this->getParam('name');
-        $this->_user_logic->register($name);
+        $context = [
+            'hasSuccess' => false
+        ];
+        if ($request->getRequestMethod() === 'POST') {
+            $name = $this->getParam('name');
+            $this->_user_logic->register($name);
+            $context['hasSuccess'] = true;
+            $context['name']       = $name;
+        }
+        return $this->render('index', $context);
     }
 
-    public function actionUpdate($request)
+    public function actionLogin($request)
     {
-        $id   = $this->getParam('id');
-        $name = $this->getParam('name');
-        $this->_user_logic->updateUser($name);
+        return $this->redirect($request, 'register');
     }
 }

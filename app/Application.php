@@ -5,13 +5,22 @@ class Application
     protected $_err_handler = null;
     protected $_middlewares = [];
 
-    private $_config = null;
+    private static $_config = null;
 
     public function __construct($config)
     {
+        if (!is_array($config)) {
+            throw new Exception("Invalid argument type of config");
+        }
+        static::$_config = $config;
         $this->_err_handler = new BaseErrorHandler;
         $this->_middlewares = array_merge($this->_middlewares, 
             isset($config['middlewares'])? $config['middlewares']:[]);
+    }
+
+    public static function Config()
+    {
+        return static::$_config;
     }
 
     private function onMiddlewares($request)
@@ -27,18 +36,14 @@ class Application
 
     public function dispatch()
     {
-        $request         = new HTTPRequest();
-        $paths           = explode('/', $request->getPathInfo());
-        $controller_path = trim($paths[1]);
-        $action_path     = trim($paths[2]);
-
-        $controller = ucfirst($controller_path . 'Controller');
-        $action     = 'action' . ucfirst($action_path);
+        $request    = new HTTPRequest();
+        $controller = $request->getController();
+        $action     = $request->getAction();
 
         try {
             $controller = IOC::find($controller);
             if (!method_exists($controller, $action)) {
-                throw new HTTPNotFoundException('action not exists');
+                throw new HTTPNotFoundException('action ' . $action . ' not exists');
             }
             $controller->beforeAction($request);
             $this->onMiddlewares($request);
@@ -56,6 +61,13 @@ class Application
                 $controller->tearDownAction($request);
             }
         }
+    }
+
+    public static function log($msg, $level='debug')
+    {
+        $default_file = dirname(__DIR__) . '/logs/debug.log';
+        $file = isset(static::$_config['log'][$level]) ? static::$_config['log'][$level] : $default_file;
+        error_log($msg, 3, $file);
     }
 
     public function setErrorHandler(BaseErrorHandler $handler)

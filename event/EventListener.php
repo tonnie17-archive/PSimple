@@ -2,5 +2,5 @@
 
 interface EventListener
 {
-    public function update($context);
+    public function update($event, $context);
 }

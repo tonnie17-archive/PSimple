@@ -24,7 +24,7 @@ class EventBus
     {
         if (!isset(static::$_listeners[$event])) return;
         foreach (static::$_listeners[$event] as $key => $listener) {
-            $listener->update($context);
+            $listener->update($event, $context);
         }
     }
 

@@ -7,6 +7,9 @@ function get_config()
             'type' => 'file',
             'path' => realpath('./data/db.json'),
         ],
+        'log' => [
+            'error' => realpath('./logs/error.log')
+        ],
         'import' => [
             'app',
             'common',
@@ -23,7 +26,11 @@ function get_config()
             'utils'
         ],
         'middlewares' => [
-            'SayHelloMiddleware',
+            // 'SayHelloMiddleware',
+        ],
+        'template' => [
+            'path'   => realpath('./views'),
+            'suffix' => 'php'
         ]
     ];
 }
