@@ -12,7 +12,5 @@ IOC::N('UserLogic', ['UserDataProvider', 'UserDataMapper']);
 IOC::N('UserController', ['UserLogic']);
 
 $_GET['name'] = 'name';
-
-$app = new Application();
+$app = new Application($config);
 $app->dispatch();
-

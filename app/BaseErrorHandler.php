@@ -2,11 +2,14 @@
 
 class BaseErrorHandler
 {
+    const PAGE_NOT_FOUND = 404;
+    const INTERNAL_ERROR = 500;
+
     public function getResolvers()
     {
         return [
-            404 => 'handle404',
-            500 => 'handle500'
+            self::PAGE_NOT_FOUND => 'handle404',
+            self::INTERNAL_ERROR => 'handle500'
         ];
     }
 

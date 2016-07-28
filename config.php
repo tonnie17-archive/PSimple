@@ -14,14 +14,16 @@ function get_config()
             'db',
             'event',
             'http',
-            'interfaces',
             'logics',
+            'middleware',
             'models',
             'services',
             'dataproviders',
             'datamappers',
-            'traits',
             'utils'
+        ],
+        'middlewares' => [
+            'SayHelloMiddleware',
         ]
     ];
 }

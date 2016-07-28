@@ -27,7 +27,7 @@ class IOC
     public static function find($name)
     {
         if (!isset(static::$_registry[$name])) {
-            throw new Exception('class:' . $name . 'not in IOC registry list');
+            throw new Exception($name . ' not in IOC registry list');
         }
         if (!isset(static::$_pools[$name])) {
             $resolver = static::$_registry[$name];

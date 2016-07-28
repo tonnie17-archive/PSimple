@@ -9,13 +9,13 @@ class UserController extends BaseController
         $this->_user_logic = $user_logic;
     }
 
-    public function actionRegister()
+    public function actionRegister($request)
     {
         $name = $this->getParam('name');
         $this->_user_logic->register($name);
     }
 
-    public function actionUpdate()
+    public function actionUpdate($request)
     {
         $id   = $this->getParam('id');
         $name = $this->getParam('name');

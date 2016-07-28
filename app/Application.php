@@ -2,21 +2,33 @@
 
 class Application
 {
-    const PATH_NOT_FOUND    = 404;
     protected $_err_handler = null;
+    protected $_middlewares = [];
 
-    public function __construct()
+    private $_config = null;
+
+    public function __construct($config)
     {
         $this->_err_handler = new BaseErrorHandler;
+        $this->_middlewares = array_merge($this->_middlewares, 
+            isset($config['middlewares'])? $config['middlewares']:[]);
+    }
+
+    private function onMiddlewares($request)
+    {
+        foreach ($this->_middlewares as $key => $middleware) {
+            $m = new ReflectionClass($middleware);
+            if (!$m->isInstantiable()) {
+                throw new Exception("Middleware: " . $middleware . ' not exists');
+            }
+            $m->newInstance()->processRequest($request);
+        }
     }
 
     public function dispatch()
     {
-        var_dump('SERVER->', $_SERVER);
-        var_dump('URL->' . $_SERVER['PATH_INFO']);
-        var_dump('ENV->', $_ENV);
-
-        $paths           = explode('/', $_SERVER['PATH_INFO']);
+        $request         = new HTTPRequest();
+        $paths           = explode('/', $request->getPathInfo());
         $controller_path = trim($paths[1]);
         $action_path     = trim($paths[2]);
 
@@ -25,15 +37,24 @@ class Application
 
         try {
             $controller = IOC::find($controller);
-            if (method_exists($controller, $action)) {
-                $controller->$action();
-            } else {
+            if (!method_exists($controller, $action)) {
                 throw new HTTPNotFoundException('action not exists');
             }
-        } catch (HTTPException $e) {
+            $controller->beforeAction($request);
+            $this->onMiddlewares($request);
+            $controller->$action($request);
+            $controller->afterAction($request);
+        } 
+        catch (HTTPException $e) {
             $this->_err_handler->handle($e);
-        } catch (Exception $e) {
-            $this->_err_handler->handle($e, self::PATH_NOT_FOUND);
+        } 
+        catch (Exception $e) {
+            $this->_err_handler->handle($e, BaseErrorHandler::PAGE_NOT_FOUND);
+        } 
+        finally {
+            if (!is_string($controller)) {
+                $controller->tearDownAction($request);
+            }
         }
     }
 
