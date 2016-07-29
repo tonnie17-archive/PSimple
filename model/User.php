@@ -1,5 +1,7 @@
 <?php
 
+use Pineapple\model\AbstractModel;
+
 class User extends AbstractModel
 {
     private $_id;

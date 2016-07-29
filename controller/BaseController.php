@@ -1,5 +1,10 @@
 <?php
 
+namespace Pineapple\controller;
+
+use Pineapple\app\Application;
+use Pineapple\http\HTTPRequest;
+
 class BaseController
 {
     public function beforeAction(HTTPRequest $request) {}

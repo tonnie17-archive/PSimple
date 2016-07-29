@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\db;
+
 abstract class FileDataSource implements DataSource
 {
     protected $_file_name = null;

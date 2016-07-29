@@ -1,5 +1,8 @@
 <?php
 
+use Pineapple\app\Application;
+use Pineapple\middleware\Middlewarable;
+
 class LogIPMiddleware implements Middlewarable
 {
     public function processRequest($request)

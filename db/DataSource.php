@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\db;
+
 interface DataSource
 {
     public function fetchById($id, $id_col, $schema);

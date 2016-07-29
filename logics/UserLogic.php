@@ -1,11 +1,11 @@
 <?php
 
-class UserLogic extends AbstractLogic
+class UserLogic
 {
     protected $_user_provider;
     protected $_user_mapper;
 
-    public function __construct(UserDataProvider $user_provider, UserDataMapper $user_mapper)
+    public function __construct($user_provider, $user_mapper)
     {
         $this->_user_provider = $user_provider;
         $this->_user_mapper   = $user_mapper;

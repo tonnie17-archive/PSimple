@@ -1,5 +1,13 @@
 <?php
 
+namespace Pineapple\app;
+
+use Pineapple\common\IOC;
+use Pineapple\http\BaseErrorHandler;
+use Pineapple\http\HTTPRequest;
+use Pineapple\http\HTTPException;
+use Pineapple\http\HTTPNotFoundException;
+
 class Application
 {
     protected $_err_handler = null;
@@ -10,7 +18,7 @@ class Application
     public function __construct($config)
     {
         if (!is_array($config)) {
-            throw new Exception("Invalid argument type of config");
+            throw new \Exception("Invalid argument type of config");
         }
         static::$_config = $config;
         $this->_err_handler = new BaseErrorHandler;
@@ -26,9 +34,9 @@ class Application
     private function onMiddlewares($request)
     {
         foreach ($this->_middlewares as $key => $middleware) {
-            $m = new ReflectionClass($middleware);
+            $m = new \ReflectionClass($middleware);
             if (!$m->isInstantiable()) {
-                throw new Exception("Middleware: " . $middleware . ' not exists');
+                throw new \Exception("Middleware: " . $middleware . ' not exists');
             }
             $m->newInstance()->processRequest($request);
         }

@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\http;
+
 class HTTPCookie
 {
     private static $instance;

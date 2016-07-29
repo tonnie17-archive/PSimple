@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\http;
+
 class HTTPRequest
 {
     private $__server;

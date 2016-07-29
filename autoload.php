@@ -7,6 +7,8 @@ function autoloading($class)
 {
     $importDirs = get_config()['import'];
     foreach ($importDirs as $key => $dir) {
+        if (strpos($class, '\\') !== -1)
+            $class = end(explode('\\', $class));
         $fileName = __DIR__ . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $class . '.php';
         $fileName = str_replace('\\', DIRECTORY_SEPARATOR, $fileName);
         if (is_file($fileName)) {

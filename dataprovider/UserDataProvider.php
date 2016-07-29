@@ -1,5 +1,7 @@
 <?php
 
+use Pineapple\dataprovider\AbstractDataProvider;
+
 class UserDataProvider extends AbstractDataProvider
 {
     public function getSchema()

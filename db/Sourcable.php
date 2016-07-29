@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\db;
+
 trait Sourcable {
     protected $_data_source = null;
 

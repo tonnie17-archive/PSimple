@@ -1,5 +1,11 @@
 <?php
 
+namespace Pineapple\datamapper;
+
+use Pineapple\db\AbstractDataConnector;
+use Pineapple\db\Sourcable;
+use Pineapple\model\AbstractModel;
+
 abstract class AbstractDataMapper extends AbstractDataConnector
 {
     use Sourcable;
@@ -51,9 +57,9 @@ abstract class AbstractDataMapper extends AbstractDataConnector
 
     public static function buildModelFromData($data)
     {
-        $reflector = new ReflectionClass(static::model());
+        $reflector = new \ReflectionClass(static::model());
         if (!$reflector->isInstantiable()) {
-            throw new Exception("Can't instantiate model");
+            throw new \Exception("Can't instantiate model");
         }
         $object     = $reflector->newInstanceWithoutConstructor();
         $setters    = $object->getSetters();

@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\db;
+
 class JsonDataSource extends FileDataSource
 {
     public static function initSource($path)

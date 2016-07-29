@@ -1,5 +1,9 @@
 <?php
 
+namespace Pineapple\event;
+
+use Pineapple\event\EventListener;
+
 class EventBus
 {
     private static $_listeners = [];

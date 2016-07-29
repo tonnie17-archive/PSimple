@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\http;
+
 class HTTPSession
 {
     const SESSION_STARTED     = TRUE;

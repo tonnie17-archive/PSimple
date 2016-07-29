@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\http;
+
 class BaseErrorHandler
 {
     const PAGE_NOT_FOUND = 404;
@@ -13,7 +15,7 @@ class BaseErrorHandler
         ];
     }
 
-    public function handle(Exception $e, $code=null)
+    public function handle(\Exception $e, $code=null)
     {
         if (is_null($code)) {
             $code = $e->getCode();

@@ -1,5 +1,10 @@
 <?php
 
+namespace Pineapple\dataprovider;
+
+use Pineapple\db\AbstractDataConnector;
+use Pineapple\db\Sourcable;
+
 abstract class AbstractDataProvider extends AbstractDataConnector
 {
     use Sourcable;

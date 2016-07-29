@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\cache\Cachable;
+
 interface Cachable
 {
     public static function get($name);

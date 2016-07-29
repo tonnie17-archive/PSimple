@@ -1,5 +1,7 @@
 <?php
 
+use Pineapple\datamapper\AbstractDataMapper;
+
 class UserDataMapper extends AbstractDataMapper
 {
     public function getSchema()

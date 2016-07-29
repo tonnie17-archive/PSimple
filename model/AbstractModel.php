@@ -1,5 +1,10 @@
 <?php
 
+namespace Pineapple\model;
+
+use Pineapple\event\EventBus;
+use Pineapple\event\EventListener;
+
 abstract class AbstractModel
 {
     protected abstract function getMapping();
@@ -24,7 +29,7 @@ abstract class AbstractModel
 
     public function __call($method, $arguments) {
         if (!method_exists($this, $method)) {
-            throw new RuntimeException($method . '() method does not exists');
+            throw new \RuntimeException($method . '() method does not exists');
         }
     }
 

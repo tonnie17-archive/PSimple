@@ -1,5 +1,7 @@
 <?php
 
+use Pineapple\controller\BaseController;
+
 class UserController extends BaseController
 {
     protected $_user_logic;

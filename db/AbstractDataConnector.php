@@ -1,5 +1,7 @@
 <?php
 
+namespace Pineapple\db;
+
 abstract class AbstractDataConnector
 {
     public function getIdCol()
