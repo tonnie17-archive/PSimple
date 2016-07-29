@@ -20,7 +20,7 @@ class Application
         if (!is_array($config)) {
             throw new \Exception("Invalid argument type of config");
         }
-        static::$_config = $config;
+        static::$_config    = $config;
         $this->_err_handler = new BaseErrorHandler;
         $this->_middlewares = array_merge($this->_middlewares, 
             isset($config['middlewares'])? $config['middlewares']:[]);
@@ -71,11 +71,9 @@ class Application
         }
     }
 
-    public static function log($msg, $level='debug')
+    public static function log($msg, $level=Logger::DEBUG)
     {
-        $default_file = dirname(__DIR__) . '/logs/debug.log';
-        $file = isset(static::$_config['log'][$level]) ? static::$_config['log'][$level] : $default_file;
-        error_log($msg, 3, $file);
+        Logger::getLogger()->log($msg, $level, isset(static::$_config['log']['dir']) ? static::$_config['log']['dir'] : dirname(__DIR__) . '/logs/');
     }
 
     public function setErrorHandler(BaseErrorHandler $handler)

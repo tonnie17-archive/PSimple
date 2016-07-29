@@ -25,7 +25,7 @@ class HTTPRequest
     public function getController()
     {
         $paths           = explode('/', $this->getPathInfo());
-        $controller_path = trim($paths[1]);
+        $controller_path = empty(trim($paths[1])) ? 'Index' : trim($paths[1]);
         return ucfirst($controller_path . 'Controller');
     }
 
