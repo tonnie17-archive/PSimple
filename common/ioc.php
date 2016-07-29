@@ -2,6 +2,9 @@
 
 namespace Pineapple\common;
 
+use Pineapple\app\Application;
+use Pineapple\http\HTTPServerException;
+
 class IOC
 {
     protected static $_registry = [];
@@ -29,7 +32,7 @@ class IOC
     public static function find($name)
     {
         if (!isset(static::$_registry[$name])) {
-            throw new \Exception($name . ' not in IOC registry list');
+            throw new HTTPServerException($name . ' not in IOC registry list');
         }
         if (!isset(static::$_pools[$name])) {
             $resolver = static::$_registry[$name];

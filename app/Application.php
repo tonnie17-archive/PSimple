@@ -59,9 +59,11 @@ class Application
             $controller->afterAction($request);
         } 
         catch (HTTPException $e) {
+            self::log($e, Logger::ERROR);
             $this->_err_handler->handle($e);
         } 
         catch (Exception $e) {
+            self::log($e, Logger::ERROR);
             $this->_err_handler->handle($e, BaseErrorHandler::PAGE_NOT_FOUND);
         } 
         finally {

@@ -2,4 +2,4 @@
 
 namespace Pineapple\http;
 
-class HTTPException extends Exception {}
+class HTTPException extends \Exception {}

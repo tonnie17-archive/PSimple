@@ -8,6 +8,9 @@ class Logger
     const DEBUG = 1;
     const ERROR = 2;
 
+    const TYPE_CONSOLE = 0;
+    const TYPE_FILE    = 3;
+
     protected static $_logger;
     protected static $_level = self::DEBUG;
 
@@ -30,15 +33,15 @@ class Logger
     {
         self::setLevel($level);
         $log_name = 'debug';
-        $log_type = 3;
+        $log_type = self::TYPE_FILE;
         if ($level === self::INFO) {
-            $log_type = 0;
+            $log_type = self::TYPE_CONSOLE;
         }
         elseif ($level === self::ERROR) {
             $log_name = 'error';
         }
-        $file         = $dir . $log_name . '.log';
-        error_log($msg, $log_type, $file);
+        $file = $dir . $log_name . '.log';
+        error_log($msg . PHP_EOL, $log_type, $file);
     }
 
     public function setLevel($level)

@@ -3,7 +3,6 @@ require_once __DIR__ . '/common/ioc.php';
 require_once __DIR__ . '/autoload.php';
 
 use Pineapple\app\Application;
-use Pineapple\app\Logger;
 use Pineapple\common\IOC;
 
 $config  = get_config();

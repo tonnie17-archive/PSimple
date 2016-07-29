@@ -47,27 +47,27 @@ class HTTPRequest
 
     public function getPathInfo()
     {
-        return $this->__server['PATH_INFO'];
+        return isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '';
     }
 
     public function getRemoteAddr()
     {
-        return $this->__server['REMOTE_ADDR'];
+        return isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
     }
 
     public function getRemotePort()
     {
-        return $this->__server['REMOTE_PORT'];
+        return isset($_SERVER['REMOTE_PORT']) ? $_SERVER['REMOTE_PORT'] : 80;
     }
 
     public function getCookieString()
     {
-        return $this->__server['HTTP_COOKIE'];
+        return isset($_SERVER['HTTP_COOKIE']) ? $_SERVER['HTTP_COOKIE'] : '';
     }
 
     public function getRequestMethod()
     {
-        return $this->__server['REQUEST_METHOD'];
+        return isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'GET';
     }
 
     public function isGet()
@@ -82,12 +82,12 @@ class HTTPRequest
 
     public function getUA()
     {
-        return $this->__server['HTTP_USER_AGENT'];
+        return isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : null;
     }
 
     public function getRequestTime()
     {
-        return $this->__server['REQUEST_TIME'];
+        return isset($_SERVER['REQUEST_TIME']) ? $_SERVER['REQUEST_TIME'] : null;
     }
 
 }
