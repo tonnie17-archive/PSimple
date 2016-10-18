@@ -20,7 +20,7 @@ abstract class FileDataSource implements DataSource
         return file_put_contents($this->getFile(), $content);
     }
 
-    public abstract static function initSource($path);
+    public static function initSource($path){}
     public abstract function load();
     public abstract function fetchById($id, $id_col, $schema);
     public abstract function fetchAll($schema);

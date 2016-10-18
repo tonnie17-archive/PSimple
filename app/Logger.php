@@ -20,7 +20,7 @@ class Logger
         self::ERROR
     ];
     
-    public function getLogger()
+    public static function getLogger()
     {
         if (!isset(self::$instance))
         {
@@ -41,7 +41,7 @@ class Logger
             $log_name = 'error';
         }
         $file = $dir . $log_name . '.log';
-        error_log($msg . PHP_EOL, $log_type, $file);
+        error_log(date('Y-m-d H:m:s') . ' ' . $msg . PHP_EOL, $log_type, $file);
     }
 
     public function setLevel($level)

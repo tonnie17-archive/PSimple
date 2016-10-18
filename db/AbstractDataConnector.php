@@ -11,5 +11,5 @@ abstract class AbstractDataConnector
 
     public abstract function getSchema();
 
-    public abstract static function model();
+    public static function model(){}
 }
