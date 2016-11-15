@@ -5,10 +5,10 @@ function get_config()
     return [
         'db' => [
             'type' => 'file',
-            'path' => realpath('./data/db.json'),
+            'path' => __DIR__ . '/data/db.json'
         ],
         'log' => [
-            'error' => realpath('./logs/error.log')
+            'error' => __DIR__ . '/logs/error.log'
         ],
         'import' => [
             'app',
@@ -30,7 +30,7 @@ function get_config()
             'LogIPMiddleware',
         ],
         'template' => [
-            'path'   => realpath('./views'),
+            'path'   => __DIR__ . '/views',
             'suffix' => 'php'
         ]
     ];

@@ -21,13 +21,13 @@ class BaseErrorHandler
             $code = $e->getCode();
         }
         $resolvers = $this->getResolvers();
-        if (array_key_exists($code, $resolvers)) {
+        if (isset($resolvers[$code])) {
             $resolver = $resolvers[$code];
-            if (!is_null($resolver)) {
+            if (!is_null($resolver)) {                
                 call_user_func_array(array($this, $resolver), [$e]);
             }
         }
-        throw $e;
+        // throw $e;
     }
 
     protected function handle404($e)

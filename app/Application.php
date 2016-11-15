@@ -60,11 +60,11 @@ class Application
         } 
         catch (HTTPException $e) {
             self::log($e, Logger::ERROR);
-            $this->_err_handler->handle($e);
+            $this->_err_handler->handle($e, BaseErrorHandler::PAGE_NOT_FOUND);
         } 
         catch (Exception $e) {
             self::log($e, Logger::ERROR);
-            $this->_err_handler->handle($e, BaseErrorHandler::PAGE_NOT_FOUND);
+            $this->_err_handler->handle($e, BaseErrorHandler::INTERNAL_ERROR);
         } 
         finally {
             if (!is_string($controller)) {

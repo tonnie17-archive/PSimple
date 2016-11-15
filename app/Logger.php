@@ -22,7 +22,7 @@ class Logger
     
     public static function getLogger()
     {
-        if (!isset(self::$instance))
+        if (!isset(self::$_logger))
         {
             self::$_logger = new self;
         }

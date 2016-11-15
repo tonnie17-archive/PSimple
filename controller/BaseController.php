@@ -27,7 +27,6 @@ class BaseController
 
     public function render($template, $data=[])
     {
-
         $config = Application::Config();
         if (isset($config['template']['path']))
         {

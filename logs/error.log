@@ -1,0 +1,184 @@
+2016-10-19 09:10:20 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/Pineapple/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-10-19 09:10:47 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/Pineapple/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 03:11:11 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 03:11:32 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 03:11:52 exception 'Pineapple\http\HTTPNotFoundException' with message 'action actionLogic not exists' in /Users/tonnie/github/kfzs/Pineapple/app/Application.php:54
+Stack trace:
+#0 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#1 {main}
+2016-11-15 06:11:21 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:48 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:38 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:59 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:25 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:26 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:56 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:57 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:10 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:15 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:44 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:54 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:08 exception 'Pineapple\http\HTTPServerException' with message 'Controller not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('Controller')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:44 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:02 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:11 exception 'Pineapple\http\HTTPServerException' with message 'IndexController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('IndexController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:53 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:20 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:21 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:28 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:41 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:52 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:21 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:27 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:35 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:39 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:58 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:00 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:12 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:07 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:29 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}
+2016-11-15 14:11:59 exception 'Pineapple\http\HTTPServerException' with message 'DeController not in IOC registry list' in /Users/tonnie/github/kfzs/Pineapple/common/ioc.php:35
+Stack trace:
+#0 /Users/tonnie/github/kfzs/Pineapple/app/Application.php(52): Pineapple\common\IOC::find('DeController')
+#1 /Users/tonnie/github/kfzs/index.php(18): Pineapple\app\Application->dispatch()
+#2 {main}

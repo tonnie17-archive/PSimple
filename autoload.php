@@ -3,6 +3,8 @@
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/common/ioc.php';
 
+date_default_timezone_set('PRC');
+
 function autoloading($class)
 {
     $importDirs = get_config()['import'];
